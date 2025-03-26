@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Criptomonedas: Dashboard de Flujo de Capital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dark-mode.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Multi-Criptomonedas: Dashboard de Flujo de Capital</h1>
+
+    <!-- Panel de control -->
+    <div class="control-panel">
+        <div class="control-group">
+            <label for="interval-dropdown"><strong>Temporalidad:</strong></label>
+            <select id="interval-dropdown">
+                <option value="1m">1 minutos</option>
+                <option value="5m">5 minutos</option>
+                <option value="15m" selected>15 minutos</option>
+                <option value="1h">1 hora</option>
+                <option value="4h">4 horas</option>
+                <option value="1d">1 día</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label for="update-interval"><strong>Actualización:</strong></label>
+            <select id="update-interval">
+                <option value="10000">10 segundos</option>
+                <option value="30000">30 segundos</option>
+                <option value="60000" selected>1 minuto</option>
+                <option value="120000">2 minutos</option>
+                <option value="300000">5 minutos</option>
+                <option value="600000">10 minutos</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label><strong>Mercado:</strong></label>
+            <div class="radio-group">
+                <input type="radio" id="market-spot" name="market-type" value="spot">
+                <label for="market-spot">Spot</label>
+                
+                <input type="radio" id="market-futures" name="market-type" value="futures">
+                <label for="market-futures">Futuros</label>
+                
+                <input type="radio" id="market-both" name="market-type" value="both">
+                <label for="market-both">Ambos</label>
+                
+                <input type="radio" id="market-combined" name="market-type" value="combined" checked>
+                <label for="market-combined">Combinado (Spot+Futuros)</label>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <button id="stop-button">Detener Actualización</button>
+            <button id="resume-button" disabled>Reanudar Actualización</button>
+            <!-- El botón CRYPTO se añadirá aquí automáticamente por crypto-manager.js -->
+            <!-- El botón de modo oscuro se añadirá aquí automáticamente por dark-mode.js -->
+        </div>
+    </div>
+
+    <!-- Tabla de datos -->
+    <div class="data-container">
+        <h2>Métricas de Flujo de Capital</h2>
+        <div id="crypto-metrics-table"></div>
+    </div>
+
+    <!-- Gráficos -->
+    <div class="data-container">
+        <h2>Gráficos de Flujo de Capital</h2>
+        <div id="crypto-charts" class="charts-grid"></div>
+    </div>
+
+    <div id="last-update"></div>
+
+    <!-- Cargar módulos en orden -->
+    <script src="mfi-indicator.js"></script>
+    <script src="chart-utils.js"></script>
+    <script src="script.js"></script>
+    <script src="crypto-manager.js"></script>
+    <script src="binance-sync-direct.js"></script>
+    <script src="dark-mode.js"></script>
+</body>
+</html>

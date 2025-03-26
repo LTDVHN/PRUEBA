@@ -1,0 +1,233 @@
+/* Estilos del modo oscuro para el Dashboard de Criptomonedas */
+
+body.dark-mode {
+    /* Sobrescribir variables de color para modo oscuro */
+    --chart-spot-line: rgba(50,150,255,0.8);
+    --chart-futures-line: rgba(255,150,50,0.8);
+    --chart-positive-flow: rgba(0,250,0,0.7);
+    --chart-negative-flow: rgba(250,50,50,0.7);
+    --chart-neutral-flow: rgba(180,180,180,0.7);
+    
+    /* Colores de señales para modo oscuro */
+    --signal-long-color: rgba(0,180,0,0.25);
+    --signal-short-color: rgba(180,0,0,0.25);
+    --signal-neutral-color: rgba(128,128,128,0.25);
+}
+
+/* Estilos base */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+/* Encabezados */
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3 {
+    color: #e0e0e0 !important;
+}
+
+/* Panel de control */
+body.dark-mode .control-panel {
+    background-color: #1e1e1e !important;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3) !important;
+}
+
+body.dark-mode select,
+body.dark-mode input {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+}
+
+/* Solo para el botón de Reanudar Actualización */
+body.dark-mode #resume-button {
+    background-color: #333333 !important; 
+    color: white !important;
+}
+
+body.dark-mode #resume-button:hover {
+    background-color: #444444 !important;
+}
+
+body.dark-mode #resume-button:disabled {
+    background-color: #222222 !important;
+    color: #888888 !important;
+}
+
+/* Contenedores de datos */
+body.dark-mode .data-container {
+    background-color: #1e1e1e !important;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.4) !important;
+}
+
+/* Tablas */
+body.dark-mode table {
+    border-color: #444 !important;
+}
+
+body.dark-mode th, 
+body.dark-mode td {
+    border-color: #444 !important;
+}
+
+body.dark-mode th {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode tr:nth-child(even) {
+    background-color: #252525 !important;
+}
+
+body.dark-mode tr:nth-child(odd) {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode tr:hover {
+    background-color: #2a2a2a !important;
+}
+
+/* Gráficos */
+body.dark-mode .chart {
+    background-color: #1e1e1e !important;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.3) !important;
+}
+
+/* Señales de trading */
+body.dark-mode .signal-long {
+    background-color: rgba(0, 180, 0, 0.25) !important;
+    color: #2ecc71 !important;
+    font-weight: bold !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .signal-short {
+    background-color: rgba(180, 0, 0, 0.25) !important;
+    color: #ff7675 !important; /* Rojo más suave */
+    font-weight: bold !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+body.dark-mode .signal-neutral {
+    background-color: rgba(128, 128, 128, 0.25) !important;
+    color: #bdc3c7 !important;
+    font-weight: bold !important;
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Confianza */
+body.dark-mode .confidence {
+    opacity: 0.8 !important;
+    color: #ddd !important;
+}
+
+/* Cambiar colores positivo/negativo para mejor contraste */
+body.dark-mode .positive {
+    color: #4caf50 !important;
+}
+
+body.dark-mode .negative {
+    color: #f44336 !important;
+}
+
+/* Loader */
+body.dark-mode .loader {
+    border-color: #333 !important;
+    border-top-color: #3498db !important;
+}
+
+/* Popup y modales */
+body.dark-mode .crypto-modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+body.dark-mode .crypto-modal-content {
+    background-color: #1e1e1e !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5) !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .crypto-modal-content h3 {
+    border-bottom-color: #444 !important;
+}
+
+body.dark-mode .coins-list {
+    border-color: #444 !important;
+}
+
+body.dark-mode .coin-item:hover {
+    background-color: #252525 !important;
+}
+
+body.dark-mode .coin-item.required-coin {
+    background-color: #2d2d18 !important;
+}
+
+body.dark-mode #new-coin-input {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+}
+
+body.dark-mode #search-coin-input {
+    background-color: #333 !important;
+    color: #e0e0e0 !important;
+    border-color: #555 !important;
+}
+
+/* Actualización en segundo plano */
+body.dark-mode .update-notice {
+    background-color: rgba(41, 121, 255, 0.9) !important;
+}
+
+body.dark-mode #last-update {
+    background-color: rgba(40, 40, 40, 0.8) !important;
+    color: #aaa !important;
+}
+
+/* Error message */
+body.dark-mode .error-message {
+    background-color: #442c2d !important;
+    color: #ffb0b0 !important;
+}
+
+/* Señales de razonamiento al pasar el mouse */
+body.dark-mode .reasoning-text {
+    background-color: rgba(30, 30, 30, 0.95) !important;
+    border: 1px solid #444 !important;
+}
+
+/* Estilos para la interfaz de gráficos Plotly en modo oscuro */
+body.dark-mode .js-plotly-plot .plotly .main-svg {
+    background-color: #1e1e1e !important;
+}
+
+body.dark-mode .js-plotly-plot .plotly .bg {
+    fill: #1e1e1e !important;
+}
+
+body.dark-mode .js-plotly-plot .plotly .xtick text,
+body.dark-mode .js-plotly-plot .plotly .ytick text,
+body.dark-mode .js-plotly-plot .plotly .gtitle,
+body.dark-mode .js-plotly-plot .plotly .ztick text {
+    fill: #e0e0e0 !important;
+}
+
+body.dark-mode .js-plotly-plot .plotly .xgrid,
+body.dark-mode .js-plotly-plot .plotly .ygrid {
+    stroke: #333 !important;
+}
+
+body.dark-mode .loading-overlay {
+    background-color: rgba(18, 18, 18, 0.9) !important;
+}
+
+body.dark-mode .loading-overlay p {
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .loader {
+    border-color: #444 !important;
+    border-top-color: #3498db !important;
+}
